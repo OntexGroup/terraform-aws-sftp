@@ -1,4 +1,4 @@
-resource "aws_route53_record" "s3_distribution_v4" {
+resource "aws_route53_record" "sftp_route53" {
   count   = var.dns["use_route53"] ? 1 : 0
   zone_id = data.aws_route53_zone.main[count.index].zone_id
   name    = var.dns["hostname"]
