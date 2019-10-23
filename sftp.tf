@@ -69,3 +69,7 @@ output "sftp_server_endpoint" {
 output "sftp_server_id" {
   value = aws_transfer_server.sftp.id
 }
+
+output "sftp_dns_hostname" {
+  value = var.dns["hostname"]
+}
